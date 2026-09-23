@@ -1,0 +1,244 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        {{ app_name }} — AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<main class="shell">
+
+    <!-- ================================================= -->
+    <!-- HEADER -->
+    <!-- ================================================= -->
+
+    <header class="hero">
+
+        <div>
+
+            <span class="eyebrow">
+                AI-POWERED LEARNING
+            </span>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Ask, understand, practice,
+                summarize and build your
+                next learning path.
+            </p>
+
+        </div>
+
+
+        <div
+            id="status"
+            class="status"
+        >
+            Ready
+        </div>
+
+    </header>
+
+
+    <!-- ================================================= -->
+    <!-- MAIN WORKSPACE -->
+    <!-- ================================================= -->
+
+    <section class="workspace">
+
+
+        <!-- ============================================= -->
+        <!-- INPUT CARD -->
+        <!-- ============================================= -->
+
+        <div class="card input-card">
+
+
+            <div class="field">
+
+                <label for="task">
+                    What do you want
+                    EduGenie to do?
+                </label>
+
+
+                <select id="task">
+
+                    <option value="qa">
+                        Ask a Question
+                    </option>
+
+                    <option value="explain">
+                        Explain a Concept
+                    </option>
+
+                    <option value="quiz">
+                        Generate a Quiz
+                    </option>
+
+                    <option value="summarize">
+                        Summarize Text
+                    </option>
+
+                    <option value="recommend">
+                        Recommend a Learning Path
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="input">
+                    Your input
+                </label>
+
+
+                <textarea
+                    id="input"
+                    rows="11"
+                    placeholder="Example: Explain the Pythagoras theorem with a simple example."
+                ></textarea>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button
+                    id="submitBtn"
+                >
+                    Run EduGenie
+                </button>
+
+
+                <button
+                    id="clearBtn"
+                    class="secondary"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <p
+                id="hint"
+                class="hint"
+            >
+                Tip: For a quiz, paste a passage
+                or topic you are studying.
+            </p>
+
+        </div>
+
+
+        <!-- ============================================= -->
+        <!-- RESULT CARD -->
+        <!-- ============================================= -->
+
+        <div class="card result-card">
+
+
+            <div class="result-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        RESULT
+                    </span>
+
+                    <h2 id="resultTitle">
+                        Your learning response
+                        will appear here
+                    </h2>
+
+                </div>
+
+
+                <button
+                    id="copyBtn"
+                    class="icon-btn"
+                    title="Copy result"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div
+                id="result"
+                class="result empty"
+            >
+
+                <div class="empty-state">
+
+                    <div class="orb">
+                        ✦
+                    </div>
+
+                    <p>
+                        Choose a task and enter
+                        your learning material.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer>
+
+        <span>
+            EduGenie
+        </span>
+
+        <span>
+            FastAPI · Gemini · HTML/CSS/JS
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script
+    src="{{ url_for('static', path='app.js') }}"
+></script>
+
+</body>
+
+</html>
