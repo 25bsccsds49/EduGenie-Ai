@@ -2,6 +2,20 @@
 
 ## Google Gemini Powered Learning Assistant
 
+Hello everyone. We are Team EduGenie AI, 
+
+Our team members are:
+
+• Karthika – AI/ML Developer
+
+• S. Priya – Backend Developer
+
+• Pooja – Frontend Developer
+
+• P. Priya – Database & Testing Engineer
+
+• Roshini – Project Lead & GitHub Manager
+
 EduGenie is an AI-powered educational assistant built with:
 
 - Python
